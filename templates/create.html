@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Create Student Data</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        table{
+            background-color: lightpink;
+            padding: 200px;
+        }
+        input{
+            border-color: aqua;
+        }
+        th{
+            text-decoration-color:blue;
+        }
+        tr{
+            padding: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container" >
+   <div class="row">
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <table>
+                    <tr>
+                        <th>First_Name:</th>
+                        <td><input type="text" name="First_Name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Last_Name:</th>
+                        <td><input type="text" name="Last_Name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Age:</th>
+                        <td><input type="number" name="Age"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Email:</th>
+                        <td><input type="email" name="Email"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Mob:</th>
+                        <td><input type="number" name="Mob"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Adress:</th>
+                        <td><input type="text" name="Adress"></td>
+                    </tr>
+
+                    <tr>
+                        <th></th>
+                        <td><input type="submit" value="Create" class="btn btn-success"
+                        style="margin-left: 30px"></td>
+                    </tr>
+
+                </table>
+            </form>
+
+   </div>
+</div>
+</body>
+</html>>
